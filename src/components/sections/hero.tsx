@@ -25,10 +25,10 @@ export function Hero() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
-                    className="mx-auto inline-block max-w-[920px] rounded-3xl border border-white/20 bg-white/15 backdrop-blur-lg px-6 py-6 md:px-10 md:py-8 shadow-[0_18px_60px_rgba(0,0,0,0.18),inset_0_1px_0_rgba(255,255,255,0.25)]"
+                    className="mx-auto inline-block w-[calc(100%-28px)] md:w-auto max-w-[920px] rounded-3xl border border-white/20 bg-white/15 backdrop-blur-lg px-6 py-6 md:px-10 md:py-8 shadow-[0_18px_60px_rgba(0,0,0,0.18),inset_0_1px_0_rgba(255,255,255,0.25)]"
                 >
                     <h1
-                        className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-[1.1] mb-6 text-balance"
+                        className="text-[34px] leading-tight sm:text-4xl md:text-6xl lg:text-7xl font-serif font-medium md:leading-[1.1] mb-6 text-balance"
                         style={{ textShadow: "0 6px 18px rgba(0,0,0,0.35)" }}
                     >
                         Designing spaces that work — <br />
@@ -43,17 +43,17 @@ export function Hero() {
                         Built on functionality, not guesswork.
                     </p>
 
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <Button size="lg" className="min-w-[200px] h-14 text-base" asChild>
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-3 md:gap-4">
+                        <Button size="lg" className="w-full md:w-auto md:min-w-[200px] h-12 md:h-14 text-base" asChild>
                             <Link href="/projects">View Projects</Link>
                         </Button>
-                        <Button size="lg" variant="outline" className="min-w-[200px] h-14 text-base bg-white/10 backdrop-blur-sm border-white/40 text-white hover:bg-white hover:text-navy" asChild>
+                        <Button size="lg" variant="outline" className="w-full md:w-auto md:min-w-[200px] h-12 md:h-14 text-base bg-white/10 backdrop-blur-sm border-white/40 text-white hover:bg-white hover:text-navy" asChild>
                             <Link href="/contact">Request Consultation</Link>
                         </Button>
                     </div>
 
                     {/* Micro Trust Chips */}
-                    <div className="mt-12 flex flex-wrap justify-center gap-6 opacity-80 text-sm font-medium tracking-wide uppercase">
+                    <div className="mt-8 md:mt-12 flex flex-wrap justify-center gap-x-6 gap-y-3 opacity-80 text-xs md:text-sm font-medium tracking-wide uppercase">
                         <span className="flex items-center gap-2">
                             <span className="w-1.5 h-1.5 rounded-full bg-brass"></span>
                             Execution-First

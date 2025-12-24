@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Manrope, Fraunces } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import { MobileBottomNav } from "@/components/layout/mobile-bottom-nav";
 
 const manrope = Manrope({
     subsets: ["latin"],
@@ -29,11 +30,12 @@ export default function RootLayout({
     return (
         <html lang="en" className="scroll-smooth">
             <body className={cn(
-                "min-h-screen bg-ivory font-sans antialiased",
+                "min-h-screen bg-ivory font-sans antialiased pb-24 md:pb-0", // Added bottom padding for mobile nav
                 manrope.variable,
                 fraunces.variable
             )}>
                 {children}
+                <MobileBottomNav />
             </body>
         </html>
     );

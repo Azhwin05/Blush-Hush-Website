@@ -66,40 +66,8 @@ export function Navbar() {
                     </Button>
                 </nav>
 
-                {/* Mobile Toggle */}
-                <button
-                    className="md:hidden p-2 text-ink"
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                >
-                    {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                </button>
+                {/* Mobile Toggle REMOVED - Replaced by Bottom Nav */}
             </div>
-
-            {/* Mobile Menu Overlay */}
-            <AnimatePresence>
-                {mobileMenuOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        className="absolute top-full left-0 w-full bg-ivory border-b border-hairline shadow-lg md:hidden flex flex-col p-6 gap-4"
-                    >
-                        {navLinks.map((link) => (
-                            <Link
-                                key={link.name}
-                                href={link.href}
-                                className="text-lg font-serif font-medium text-ink"
-                                onClick={() => setMobileMenuOpen(false)}
-                            >
-                                {link.name}
-                            </Link>
-                        ))}
-                        <Button className="w-full mt-4" asChild onClick={() => setMobileMenuOpen(false)}>
-                            <Link href="/contact">Request Consultation</Link>
-                        </Button>
-                    </motion.div>
-                )}
-            </AnimatePresence>
         </header>
     );
 }
