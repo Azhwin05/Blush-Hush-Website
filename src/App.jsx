@@ -36,8 +36,8 @@ const Navbar = () => {
                 backdropFilter: scrolled ? 'blur(10px)' : 'none'
             }}>
             <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <div style={{ fontFamily: 'var(--font-serif)', fontSize: '1.5rem', fontWeight: 600, color: 'var(--text-primary)' }}>
-                    BH INTERIORS<span className="text-gold">.</span>
+                <div style={{ width: '180px' }}>
+                    <img src="/assets/logo-bnh-horizontal.png" alt="Blush & Hush Logo" style={{ width: '100%', height: 'auto' }} />
                 </div>
 
                 {/* Desktop Menu */}

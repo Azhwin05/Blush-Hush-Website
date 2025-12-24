@@ -7,7 +7,7 @@ const Footer = () => {
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '3rem', justifyContent: 'space-between', marginBottom: '3rem' }}>
 
                     <div style={{ maxWidth: '300px' }}>
-                        <h4 style={{ color: 'white', fontSize: '1.2rem', marginBottom: '1rem' }}>BH INTERIORS.</h4>
+                        <img src="/assets/logo-bnh-vertical.png" alt="Blush & Hush Logo" style={{ width: '140px', marginBottom: '1.5rem', filter: 'brightness(0) invert(1)' }} />
                         <p>Designing and executing premium residential and healthcare spaces across South India.</p>
                     </div>
 
