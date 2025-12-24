@@ -63,7 +63,7 @@ export function FeaturedProjects() {
                     </Link>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[280px] md:auto-rows-[350px]">
+                <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 md:grid md:grid-cols-4 md:gap-6 md:pb-0 scrollbar-hide -mx-6 px-6 md:mx-0 md:px-0 auto-rows-[280px] md:auto-rows-[350px]">
                     {projects.map((project, i) => (
                         <motion.div
                             key={project.id}
@@ -72,7 +72,9 @@ export function FeaturedProjects() {
                             transition={{ delay: i * 0.1 }}
                             viewport={{ once: true }}
                             className={cn(
-                                "group relative rounded-[2px] overflow-hidden cursor-pointer",
+                                "group relative rounded-[2px] overflow-hidden cursor-pointer shrink-0 snap-center",
+                                // Mobile: Fixed width 85vw for carousel effect
+                                "w-[85vw] h-[280px] md:w-auto md:h-auto",
                                 project.size === "large" ? "md:col-span-2 md:row-span-2" : "md:col-span-1"
                             )}
                         >
@@ -84,20 +86,23 @@ export function FeaturedProjects() {
                             />
                             <div className="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
 
-                            <div className="absolute bottom-0 left-0 p-6 text-white translate-y-4 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                                <span className="text-xs font-medium uppercase tracking-wider bg-white/20 backdrop-blur-md px-2 py-1 rounded-sm mb-2 inline-block">
+                            <div className="absolute bottom-0 left-0 p-4 md:p-6 text-white translate-y-4 group-hover:translate-y-0 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-all duration-300">
+                                <span className="text-[10px] md:text-xs font-medium uppercase tracking-wider bg-white/20 backdrop-blur-md px-2 py-1 rounded-sm mb-2 inline-block">
                                     {project.category}
                                 </span>
                                 <h3 className="text-xl md:text-2xl font-serif mb-1">{project.title}</h3>
-                                <p className="text-white/80 text-sm">{project.location}</p>
+                                <p className="text-white/80 text-xs md:text-sm">{project.location}</p>
                             </div>
                         </motion.div>
                     ))}
 
-                    {/* Mobile 'View All' Link */}
-                    <div className="md:hidden flex items-center justify-center p-6 bg-ivory rounded-lg border border-hairline">
-                        <Link href="/projects" className="flex items-center gap-2 text-navy font-bold">
-                            View All Case Studies <ArrowUpRight size={18} />
+                    {/* Mobile 'View All' Link - As the last consistent slide card */}
+                    <div className="md:hidden flex items-center justify-center shrink-0 w-[85vw] h-[280px] bg-ivory rounded-[2px] border border-hairline snap-center">
+                        <Link href="/projects" className="flex flex-col items-center gap-3 text-navy">
+                            <span className="w-12 h-12 rounded-full bg-white border border-hairline flex items-center justify-center shadow-sm">
+                                <ArrowUpRight size={20} />
+                            </span>
+                            <span className="text-lg font-serif">View All Projects</span>
                         </Link>
                     </div>
                 </div>

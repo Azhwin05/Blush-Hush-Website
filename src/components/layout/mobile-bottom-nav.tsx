@@ -24,20 +24,11 @@ export function MobileBottomNav() {
     const [lastScrollY, setLastScrollY] = useState(0);
 
     // Handle scroll visibility (show on up, hide on down)
+    // Handle scroll visibility (show on up, hide on down)
+    // REMOVED: App-like behavior requires fixed nav
     useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollY = window.scrollY;
-            if (currentScrollY > lastScrollY && currentScrollY > 100) {
-                setShowNav(false);
-            } else {
-                setShowNav(true);
-            }
-            setLastScrollY(currentScrollY);
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [lastScrollY]);
+        setShowNav(true);
+    }, []);
 
     // Set active tab based on path
     useEffect(() => {
@@ -57,7 +48,7 @@ export function MobileBottomNav() {
                         transition={{ type: "spring", stiffness: 280, damping: 25 }}
                         className="fixed bottom-[14px] left-[14px] right-[14px] z-50 md:hidden"
                     >
-                        <div className="flex items-center justify-between px-2 py-2 rounded-2xl md:rounded-3xl border border-white/20 bg-white/15 backdrop-blur-xl shadow-[0_18px_60px_rgba(0,0,0,0.18)]">
+                        <div className="flex items-center justify-between px-2 py-2 rounded-2xl md:rounded-3xl border border-white/20 bg-white shadow-[0_18px_60px_rgba(0,0,0,0.18)]">
                             {/* Optional Noise Overlay */}
                             <div className="absolute inset-0 rounded-2xl opacity-[0.05] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
 

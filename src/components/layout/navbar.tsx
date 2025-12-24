@@ -24,46 +24,27 @@ export function Navbar() {
     const pathname = usePathname();
 
     useMotionValueEvent(scrollY, "change", (latest) => {
-        const previous = lastScrollY.current;
-
-        // Update scrolled state for opacity/background
-        if (latest > 20) {
-            setScrolled(true);
-        } else {
-            setScrolled(false);
-        }
-
-        // Update hidden state for slide-up/down
-        // Hide if scrolling down > 80px, show if scrolling up
-        if (latest > previous && latest > 80) {
-            setHidden(true);
-        } else {
-            setHidden(false);
-        }
-
+        // Simple boolean check is fine, setState bails out if unchanged
+        setScrolled(latest > 20);
         lastScrollY.current = latest;
     });
 
     return (
         <motion.header
-            variants={{
-                visible: { y: 0, opacity: 1 },
-                hidden: { y: -16, opacity: 0 }
-            }}
-            initial="visible"
-            animate={hidden ? "hidden" : "visible"}
-            transition={{ duration: 0.2, ease: "easeOut" }}
+            // No hide/show variants - always visible
             className={cn(
-                "fixed z-50 transition-all duration-300 pointer-events-auto",
-                // Mobile: Full width, simple glass
-                "top-0 left-0 right-0 w-full md:hidden py-4 px-6 bg-white/10 backdrop-blur-md border-b border-white/10",
+                "fixed z-50 transition-[background-color,border-color,box-shadow,padding] duration-500 pointer-events-auto",
+                // Mobile: Transparent initially, Solid White when scrolled
+                "top-0 left-0 right-0 w-full md:hidden py-4 px-6 transition-colors",
+                scrolled && "md:hidden" ? "bg-white/95 backdrop-blur-md border-b border-hairline shadow-sm" : "bg-transparent border-none",
+
                 // Desktop: Floating Pill
                 "md:block md:top-4 md:left-0 md:right-0 md:mx-auto md:max-w-7xl md:rounded-2xl md:border md:w-full",
-                // Desktop Glass Styles
+                // Desktop Styles: Transparent -> Solid White on Scroll
                 scrolled
-                    ? "md:bg-white/15 md:border-white/12 md:shadow-[0_12px_40px_rgba(0,0,0,0.12)]"
+                    ? "md:bg-white/90 md:border-white/20 md:shadow-[0_12px_40px_rgba(0,0,0,0.08)]"
                     : "md:bg-white/10 md:border-white/10",
-                "md:backdrop-blur-md"
+                "md:backdrop-blur-xl"
             )}
             style={{
                 height: "68px", // Fixed height for desktop consistency

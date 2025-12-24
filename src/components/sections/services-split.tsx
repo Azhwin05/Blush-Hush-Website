@@ -17,10 +17,10 @@ export function ServicesSplit() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        className="group relative bg-white rounded-[18px] p-6 md:p-14 border border-hairline shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden"
+                        className="group relative bg-white rounded-[18px] p-5 md:p-14 border border-hairline shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden"
                     >
-                        <div className="absolute top-0 right-0 p-6 md:p-10 opacity-5 group-hover:opacity-10 transition-opacity">
-                            <Home className="w-[80px] h-[80px] md:w-[120px] md:h-[120px]" strokeWidth={0.5} />
+                        <div className="absolute top-0 right-0 p-5 md:p-10 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <Home className="w-[60px] h-[60px] md:w-[120px] md:h-[120px]" strokeWidth={0.5} />
                         </div>
 
                         <div className="flex items-center gap-3 mb-4 md:mb-6">
@@ -52,10 +52,10 @@ export function ServicesSplit() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className="group relative bg-navy rounded-[18px] p-6 md:p-14 text-white shadow-xl overflow-hidden"
+                        className="group relative bg-navy rounded-[18px] p-5 md:p-14 text-white shadow-xl overflow-hidden"
                     >
-                        <div className="absolute top-0 right-0 p-6 md:p-10 opacity-5 group-hover:opacity-10 transition-opacity">
-                            <Stethoscope className="w-[80px] h-[80px] md:w-[120px] md:h-[120px]" strokeWidth={0.5} />
+                        <div className="absolute top-0 right-0 p-5 md:p-10 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <Stethoscope className="w-[60px] h-[60px] md:w-[120px] md:h-[120px]" strokeWidth={0.5} />
                         </div>
 
                         <div className="flex items-center gap-3 mb-4 md:mb-6">
