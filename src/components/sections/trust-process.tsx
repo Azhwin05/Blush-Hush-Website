@@ -49,23 +49,23 @@ export function TrustProcess() {
             <div className="container-wide">
 
                 {/* Trust Strip */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-24 border-y border-hairline py-12">
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 mb-12 md:mb-24 border-y border-hairline py-8 md:py-12">
                     {stats.map((stat, i) => (
                         <div key={i} className="text-center">
-                            <span className="block text-4xl md:text-5xl font-serif text-navy mb-2">{stat.value}</span>
-                            <span className="text-xs font-bold uppercase tracking-widest text-secondary">{stat.label}</span>
+                            <span className="block text-3xl md:text-5xl font-serif text-navy mb-1 md:mb-2">{stat.value}</span>
+                            <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-secondary">{stat.label}</span>
                         </div>
                     ))}
                 </div>
 
                 {/* Process Section */}
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16">
                     <div className="lg:col-span-5">
-                        <span className="text-brass font-bold tracking-widest text-xs uppercase mb-4 block">How We Work</span>
-                        <h2 className="text-3xl md:text-4xl text-ink leading-tight mb-6">
+                        <span className="text-brass font-bold tracking-widest text-[10px] md:text-xs uppercase mb-3 md:mb-4 block">How We Work</span>
+                        <h2 className="text-2xl md:text-4xl text-ink leading-tight mb-4 md:mb-6">
                             Good design is invisible. <br />It simply works.
                         </h2>
-                        <p className="text-secondary text-lg mb-8 leading-relaxed">
+                        <p className="text-secondary text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
                             Every project follows a structured process. No guesswork on site. Whether it's a home or a hospital, we plan every detail before the first brick is laid.
                         </p>
 

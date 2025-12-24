@@ -17,31 +17,31 @@ export function ServicesSplit() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        className="group relative bg-white rounded-[18px] p-10 md:p-14 border border-hairline shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden"
+                        className="group relative bg-white rounded-[18px] p-6 md:p-14 border border-hairline shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden"
                     >
-                        <div className="absolute top-0 right-0 p-10 opacity-5 group-hover:opacity-10 transition-opacity">
-                            <Home size={120} strokeWidth={0.5} />
+                        <div className="absolute top-0 right-0 p-6 md:p-10 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <Home className="w-[80px] h-[80px] md:w-[120px] md:h-[120px]" strokeWidth={0.5} />
                         </div>
 
-                        <div className="flex items-center gap-3 mb-6">
+                        <div className="flex items-center gap-3 mb-4 md:mb-6">
                             <span className="w-10 h-10 rounded-full bg-navy/5 flex items-center justify-center text-navy">
                                 <Home size={20} />
                             </span>
-                            <span className="text-xs font-bold tracking-widest uppercase text-navy/60">Residential & Commercial</span>
+                            <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase text-navy/60">Residential & Commercial</span>
                         </div>
 
-                        <h3 className="text-3xl md:text-4xl mb-4 group-hover:text-brass transition-colors">Interior Design & Execution</h3>
-                        <p className="text-secondary text-lg mb-8 leading-relaxed max-w-md">
+                        <h3 className="text-2xl md:text-4xl mb-3 md:mb-4 group-hover:text-brass transition-colors">Interior Design & Execution</h3>
+                        <p className="text-secondary text-base md:text-lg mb-6 md:mb-8 leading-relaxed max-w-md">
                             From concept to execution, we handle design, drawings, material planning, and on-site coordination.
                         </p>
 
-                        <ul className="space-y-3 mb-8 text-ink/80">
+                        <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8 text-ink/80 text-sm md:text-base">
                             <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-brass rounded-full"></span> Residential Interiors (Villas, Apartments)</li>
                             <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-brass rounded-full"></span> Commercial & Office Workspaces</li>
                             <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-brass rounded-full"></span> Clinics, Pharmacies & Labs</li>
                         </ul>
 
-                        <Link href="/services#interiors" className="inline-flex items-center text-navy font-semibold hover:gap-2 transition-all">
+                        <Link href="/services#interiors" className="inline-flex items-center text-navy font-semibold hover:gap-2 transition-all text-sm md:text-base">
                             Explore Interiors <ArrowRight size={16} className="ml-2" />
                         </Link>
                     </motion.div>
@@ -52,31 +52,31 @@ export function ServicesSplit() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className="group relative bg-navy rounded-[18px] p-10 md:p-14 text-white shadow-xl overflow-hidden"
+                        className="group relative bg-navy rounded-[18px] p-6 md:p-14 text-white shadow-xl overflow-hidden"
                     >
-                        <div className="absolute top-0 right-0 p-10 opacity-5 group-hover:opacity-10 transition-opacity">
-                            <Stethoscope size={120} strokeWidth={0.5} />
+                        <div className="absolute top-0 right-0 p-6 md:p-10 opacity-5 group-hover:opacity-10 transition-opacity">
+                            <Stethoscope className="w-[80px] h-[80px] md:w-[120px] md:h-[120px]" strokeWidth={0.5} />
                         </div>
 
-                        <div className="flex items-center gap-3 mb-6">
+                        <div className="flex items-center gap-3 mb-4 md:mb-6">
                             <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white">
                                 <Stethoscope size={20} />
                             </span>
-                            <span className="text-xs font-bold tracking-widest uppercase text-white/60">Specialized Infrastructure</span>
+                            <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase text-white/60">Specialized Infrastructure</span>
                         </div>
 
-                        <h3 className="text-3xl md:text-4xl mb-4 text-white group-hover:text-brass transition-colors">Healthcare Planning</h3>
-                        <p className="text-white/80 text-lg mb-8 leading-relaxed max-w-md">
+                        <h3 className="text-2xl md:text-4xl mb-3 md:mb-4 text-white group-hover:text-brass transition-colors">Healthcare Planning</h3>
+                        <p className="text-white/80 text-base md:text-lg mb-6 md:mb-8 leading-relaxed max-w-md">
                             Healthcare design demands responsibility. We plan with clinical workflows and NABH standards in mind.
                         </p>
 
-                        <ul className="space-y-3 mb-8 text-white/90">
+                        <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8 text-white/90 text-sm md:text-base">
                             <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-brass rounded-full"></span> Clinic & Hospital Planning</li>
                             <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-brass rounded-full"></span> OT Layout & Zoning (Sterile/Public)</li>
                             <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-brass rounded-full"></span> Equipment & Approvals Coordination</li>
                         </ul>
 
-                        <Link href="/services#healthcare" className="inline-flex items-center text-white font-semibold hover:gap-2 transition-all">
+                        <Link href="/services#healthcare" className="inline-flex items-center text-white font-semibold hover:gap-2 transition-all text-sm md:text-base">
                             Explore Healthcare <ArrowRight size={16} className="ml-2" />
                         </Link>
                     </motion.div>

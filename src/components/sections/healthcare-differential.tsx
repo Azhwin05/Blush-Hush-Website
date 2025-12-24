@@ -34,7 +34,7 @@ export function HealthcareDifferential() {
     return (
         <section className="section-padding bg-ivory overflow-hidden">
             <div className="container-wide">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
@@ -42,15 +42,15 @@ export function HealthcareDifferential() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.8 }}
                     >
-                        <span className="text-sage font-bold tracking-widest text-xs uppercase mb-4 block">Healthcare Expertise</span>
-                        <h2 className="text-3xl md:text-5xl text-ink leading-[1.2] mb-6">
+                        <span className="text-sage font-bold tracking-widest text-[10px] md:text-xs uppercase mb-3 md:mb-4 block">Healthcare Expertise</span>
+                        <h2 className="text-2xl md:text-5xl text-ink leading-[1.2] mb-4 md:mb-6">
                             Healthcare spaces that function on <span className="text-navy italic">Day One.</span>
                         </h2>
-                        <p className="text-secondary text-lg mb-8 leading-relaxed">
+                        <p className="text-secondary text-base md:text-lg mb-6 md:mb-8 leading-relaxed">
                             We design hospitals that function smoothly on Day One — and scale easily in the future. Incorrect zoning can cripple a hospital's efficiency. We get it right on the drawing board.
                         </p>
 
-                        <ul className="space-y-4 mb-8">
+                        <ul className="space-y-3 md:space-y-4 mb-8 text-sm md:text-base">
                             {[
                                 "Surgeon-Centric Planning Paradigm",
                                 "Effective OT & Clinical Space Utilization",
@@ -59,7 +59,7 @@ export function HealthcareDifferential() {
                                 "Future Expansion Readiness"
                             ].map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-ink font-medium">
-                                    <span className="w-6 h-6 rounded-full bg-sage/20 flex items-center justify-center text-sage-dark"><Check size={14} /></span>
+                                    <span className="w-5 h-5 md:w-6 md:h-6 rounded-full bg-sage/20 flex items-center justify-center text-sage-dark shrink-0"><Check size={14} /></span>
                                     {item}
                                 </li>
                             ))}

@@ -53,17 +53,17 @@ export function FeaturedProjects() {
     return (
         <section className="section-padding bg-white">
             <div className="container-wide">
-                <div className="flex justify-between items-end mb-12">
+                <div className="flex justify-between items-end mb-8 md:mb-12">
                     <div>
-                        <span className="text-secondary uppercase tracking-widest text-xs font-bold mb-2 block">Selected Works</span>
-                        <h2 className="text-3xl md:text-4xl text-ink">Recent Projects</h2>
+                        <span className="text-secondary uppercase tracking-widest text-[10px] md:text-xs font-bold mb-2 block">Selected Works</span>
+                        <h2 className="text-2xl md:text-4xl text-ink">Recent Projects</h2>
                     </div>
                     <Link href="/projects" className="hidden md:flex items-center gap-2 text-navy hover:text-brass transition-colors font-medium">
                         View All Projects <ArrowUpRight size={18} />
                     </Link>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6 auto-rows-[300px] md:auto-rows-[350px]">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 auto-rows-[280px] md:auto-rows-[350px]">
                     {projects.map((project, i) => (
                         <motion.div
                             key={project.id}
