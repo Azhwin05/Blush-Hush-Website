@@ -26,18 +26,18 @@ const Navbar = () => {
     }, []);
 
     return (
-        <nav className="fixed w-full z-50"
+        <nav className="fixed w-full z-50 transition-all duration-500"
             style={{
                 position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 100,
                 backgroundColor: scrolled ? 'rgba(253, 252, 248, 0.98)' : 'transparent',
                 boxShadow: scrolled ? '0 4px 20px rgba(0,0,0,0.03)' : 'none',
-                padding: scrolled ? '1rem 0' : '1.5rem 0',
+                padding: scrolled ? '0.8rem 0' : '1.2rem 0',
                 transition: 'all 0.4s ease',
                 backdropFilter: scrolled ? 'blur(10px)' : 'none'
             }}>
             <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                <div style={{ width: '180px' }}>
-                    <img src="/assets/logo-bnh-horizontal.png" alt="Blush & Hush Logo" style={{ width: '100%', height: 'auto' }} />
+                <div style={{ width: '150px', display: 'flex', alignItems: 'center' }}>
+                    <img src="/assets/logo-bnh-horizontal.png" alt="Blush & Hush Logo" style={{ width: '100%', height: 'auto', maxHeight: '50px', objectFit: 'contain' }} />
                 </div>
 
                 {/* Desktop Menu */}
