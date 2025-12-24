@@ -20,11 +20,11 @@ export function Navbar() {
     const { scrollY } = useScroll();
     const [scrolled, setScrolled] = useState(false);
     const [hidden, setHidden] = useState(false);
-    const [lastScrollY, setLastScrollY] = useState(0);
+    const lastScrollY = React.useRef(0);
     const pathname = usePathname();
 
     useMotionValueEvent(scrollY, "change", (latest) => {
-        const previous = lastScrollY;
+        const previous = lastScrollY.current;
 
         // Update scrolled state for opacity/background
         if (latest > 20) {
@@ -41,7 +41,7 @@ export function Navbar() {
             setHidden(false);
         }
 
-        setLastScrollY(latest);
+        lastScrollY.current = latest;
     });
 
     return (
@@ -50,6 +50,7 @@ export function Navbar() {
                 visible: { y: 0, opacity: 1 },
                 hidden: { y: -16, opacity: 0 }
             }}
+            initial="visible"
             animate={hidden ? "hidden" : "visible"}
             transition={{ duration: 0.2, ease: "easeOut" }}
             className={cn(
@@ -57,7 +58,7 @@ export function Navbar() {
                 // Mobile: Full width, simple glass
                 "top-0 left-0 right-0 w-full md:hidden py-4 px-6 bg-white/10 backdrop-blur-md border-b border-white/10",
                 // Desktop: Floating Pill
-                "md:top-4 md:left-0 md:right-0 md:mx-auto md:max-w-7xl md:rounded-2xl md:border md:w-full",
+                "md:block md:top-4 md:left-0 md:right-0 md:mx-auto md:max-w-7xl md:rounded-2xl md:border md:w-full",
                 // Desktop Glass Styles
                 scrolled
                     ? "md:bg-white/15 md:border-white/12 md:shadow-[0_12px_40px_rgba(0,0,0,0.12)]"
