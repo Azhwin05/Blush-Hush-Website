@@ -25,11 +25,11 @@ export function Hero() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
-                    className="mx-auto inline-block max-w-[920px] rounded-3xl border border-white/15 bg-black/35 backdrop-blur-md px-6 py-6 md:px-10 md:py-8"
+                    className="mx-auto inline-block max-w-[920px] rounded-3xl border border-white/20 bg-white/15 backdrop-blur-lg px-6 py-6 md:px-10 md:py-8 shadow-[0_18px_60px_rgba(0,0,0,0.18),inset_0_1px_0_rgba(255,255,255,0.25)]"
                 >
                     <h1
                         className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-[1.1] mb-6 text-balance"
-                        style={{ textShadow: "0 8px 22px rgba(0,0,0,0.45)" }}
+                        style={{ textShadow: "0 6px 18px rgba(0,0,0,0.35)" }}
                     >
                         Designing spaces that work — <br />
                         <span className="italic text-ivory/90">for living, working & healing.</span>
@@ -37,7 +37,7 @@ export function Hero() {
 
                     <p
                         className="text-lg md:text-xl font-light text-white/90 max-w-2xl mx-auto mb-10 leading-relaxed"
-                        style={{ textShadow: "0 8px 22px rgba(0,0,0,0.45)" }}
+                        style={{ textShadow: "0 6px 18px rgba(0,0,0,0.35)" }}
                     >
                         Premium residential interiors and NABH-compliant healthcare infrastructure.
                         Built on functionality, not guesswork.

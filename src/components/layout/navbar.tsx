@@ -29,8 +29,8 @@ export function Navbar() {
     return (
         <header
             className={cn(
-                "fixed top-0 left-0 w-full z-50 transition-all duration-500",
-                scrolled ? "py-2 bg-ivory/90 backdrop-blur-md shadow-sm border-b border-hairline" : "py-5 bg-transparent"
+                "fixed top-0 left-0 w-full z-50 transition-all duration-500 border-b border-white/15 shadow-[0_10px_35px_rgba(0,0,0,0.10)] backdrop-blur-md",
+                scrolled ? "py-2 bg-white/15" : "py-5 bg-white/10"
             )}
         >
             <div className="container-wide flex items-center justify-between">
@@ -55,6 +55,7 @@ export function Navbar() {
                             key={link.name}
                             href={link.href}
                             className="text-sm font-medium text-ink uppercase tracking-wider hover:text-brass transition-colors relative group"
+                            style={{ textShadow: "0 2px 10px rgba(0,0,0,0.25)" }}
                         >
                             {link.name}
                             <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-brass transition-all duration-300 group-hover:w-full"></span>
