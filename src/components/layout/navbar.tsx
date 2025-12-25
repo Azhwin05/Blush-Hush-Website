@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 
 const navLinks = [
+    { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Projects", href: "/projects" },
@@ -50,21 +51,8 @@ export function Navbar() {
                 height: "68px", // Fixed height for desktop consistency
             }}
         >
-            <div className="h-full flex items-center justify-between px-0 md:px-8">
-                {/* Logo */}
-                <Link href="/" className="relative flex items-center shrink-0">
-                    <div className="relative w-[140px] h-[40px] md:w-[160px] md:h-[45px]">
-                        <Image
-                            src="/assets/logo-bnh-horizontal.png"
-                            alt="BH Interiors"
-                            fill
-                            className="object-contain object-left"
-                            priority
-                        />
-                    </div>
-                </Link>
-
-                {/* Desktop Nav */}
+            <div className="h-full flex items-center justify-center px-0 md:px-8">
+                {/* Desktop Nav - Centered & Logo Removed */}
                 <nav className="hidden md:flex items-center gap-[26px]">
                     {navLinks.map((link) => {
                         const isActive = pathname === link.href;
@@ -88,7 +76,7 @@ export function Navbar() {
                         );
                     })}
 
-                    {/* Get Quote Button - The Star */}
+                    {/* Get Quote Button */}
                     <div className="ml-2">
                         <Button
                             variant="luxury"

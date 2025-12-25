@@ -9,7 +9,34 @@
     }
 
     body {
-        @apply bg-ivory text-ink antialiased font-sans overflow-x-hidden;
+        @apply bg-ivory text-ink antialiased font-sans overflow-x-hidden select-none;
+        /* Prevent text selection */
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    /* Forcefully hide default cursor on desktop to allow Custom Cursor to take over completely */
+    @media (min-width: 768px) {
+        * {
+            cursor: none !important;
+        }
+    }
+
+    img {
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        pointer-events: none;
+        /* Disables right click on images */
+    }
+
+    /* Allow pointer events for images inside links or buttons if needed */
+    a img,
+    button img {
+        pointer-events: none;
     }
 
     h1,

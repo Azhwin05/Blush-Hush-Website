@@ -3,6 +3,7 @@ import { Manrope, Fraunces } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { MobileBottomNav } from "@/components/layout/mobile-bottom-nav";
+import { CustomCursor } from "@/components/ui/custom-cursor";
 
 const manrope = Manrope({
     subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({
                 fraunces.variable
             )}>
                 {children}
+                <CustomCursor />
                 <MobileBottomNav />
             </body>
         </html>
