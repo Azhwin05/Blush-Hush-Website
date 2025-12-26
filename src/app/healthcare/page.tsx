@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 
 export default function HealthcarePage() {
     return (
-        <main className="min-h-screen bg-ivory text-ink font-manrope selection:bg-navy/20 selection:text-navy">
+        <main className="min-h-screen bg-hc-surface text-ink font-manrope selection:bg-hc-teal/20 selection:text-hc-teal">
             {/* STRICT CURSOR OVERRIDE for Professional/Technical Feel */}
             <style dangerouslySetInnerHTML={{
                 __html: `

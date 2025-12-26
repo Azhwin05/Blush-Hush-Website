@@ -19,6 +19,15 @@ const config: Config = {
                 brass: "#B08D57",
                 sage: "#7C8F83",
                 hairline: "#E7DED5",
+                // Dedicated Healthcare Palette
+                hc: {
+                    yellow: "#FFE78B",
+                    grey: "#D9DADA",
+                    teal: "#57A7B3",
+                    sky: "#A2D9F7",
+                    olive: "#898778",
+                    surface: "#FEFEFE",
+                }
             },
             fontFamily: {
                 serif: ["var(--font-fraunces)", "serif"],
