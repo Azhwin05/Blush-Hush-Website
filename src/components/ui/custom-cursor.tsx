@@ -22,9 +22,6 @@ export function CustomCursor() {
     const smoothX = useSpring(mouseX, { stiffness: 500, damping: 28, mass: 0.5 });
     const smoothY = useSpring(mouseY, { stiffness: 500, damping: 28, mass: 0.5 });
 
-    // If we are on healthcare page, return null BEFORE adding event listeners
-    if (isHealthcare) return null;
-
     useEffect(() => {
         const updateMouse = (e: MouseEvent) => {
             mouseX.set(e.clientX);
@@ -80,6 +77,9 @@ export function CustomCursor() {
     // But hooks run on client. We'll use CSS media query to hide it on touch, or just render it and let it be.
     // The user said "Replace the default cursor", usually implies desktop. 
     // We'll hide it via CSS using 'hidden md:block' on the wrapper to be safe.
+
+    // If we are on healthcare page, return null (but AFTER all hooks have run)
+    if (isHealthcare) return null;
 
     return (
         <motion.div
