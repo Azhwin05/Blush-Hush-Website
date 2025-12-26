@@ -19,17 +19,10 @@ export default function HealthcarePage() {
             {/* STRICT CURSOR OVERRIDE for Professional/Technical Feel */}
             <style dangerouslySetInnerHTML={{
                 __html: `
-                /* Force system cursor on everything */
-                html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-                    cursor: default !important;
-                }
-                /* Interactive elements */
-                a, button, [role="button"], input[type="submit"], input[type="reset"], input[type="button"], label[for] {
-                    cursor: pointer !important;
-                }
-                /* Text inputs */
-                input[type="text"], input[type="email"], input[type="password"], textarea, input[type="search"] {
-                    cursor: text !important;
+                /* STRICT CLINICAL BLUE CURSOR (#A2D9F7) */
+                /* Enforce single cursor shape everywhere on this route */
+                html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video, button, [role="button"], input, textarea {
+                    cursor: url("/cursors/healthcare-arrow.svg"), auto !important;
                 }
             `}} />
 
