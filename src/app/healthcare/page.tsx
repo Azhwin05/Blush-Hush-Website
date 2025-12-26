@@ -17,7 +17,8 @@ export default function HealthcarePage() {
     return (
         <main className="min-h-screen bg-ivory text-ink font-manrope selection:bg-navy/20 selection:text-navy">
             {/* STRICT CURSOR OVERRIDE for Professional/Technical Feel */}
-            <style>{`
+            <style dangerouslySetInnerHTML={{
+                __html: `
                 /* Force system cursor on everything */
                 body, a, button, [role="button"], img, input {
                     cursor: auto !important;
@@ -26,7 +27,7 @@ export default function HealthcarePage() {
                 html, body {
                     cursor: auto !important;
                 }
-            `}</style>
+            `}} />
 
             <Navbar />
             <HealthcareHero />
