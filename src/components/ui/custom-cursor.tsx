@@ -3,9 +3,15 @@
 import { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 export function CustomCursor() {
+    const pathname = usePathname();
     const [isVisible, setIsVisible] = useState(false);
+
+    // Disable custom cursor strictly for Healthcare pages to maintain "Technical/Professional" feel
+    const isHealthcare = pathname?.startsWith("/healthcare");
+
     const [hoverState, setHoverState] = useState<"default" | "pointer" | "image" | "button">("default");
 
     // Mouse coordinates
@@ -15,6 +21,9 @@ export function CustomCursor() {
     // Smooth physics for the cursor movement (10-20ms lag feel)
     const smoothX = useSpring(mouseX, { stiffness: 500, damping: 28, mass: 0.5 });
     const smoothY = useSpring(mouseY, { stiffness: 500, damping: 28, mass: 0.5 });
+
+    // If we are on healthcare page, return null BEFORE adding event listeners
+    if (isHealthcare) return null;
 
     useEffect(() => {
         const updateMouse = (e: MouseEvent) => {

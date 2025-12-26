@@ -20,6 +20,20 @@ export function Footer() {
                         <p className="text-white/60 leading-relaxed text-sm mb-6">
                             Designing and executing premium residential and healthcare spaces across South India.
                         </p>
+
+                        {/* Editorial Healthcare Link */}
+                        <div className="mb-8">
+                            <p className="text-white/40 text-[11px] leading-relaxed font-manrope">
+                                Blush & Hush is a multidisciplinary design studio delivering refined interior spaces across residential, commercial, and retail environments.
+                            </p>
+                            <Link
+                                href="/healthcare"
+                                className="block mt-3 text-white/50 text-[11px] hover:text-white/80 transition-colors"
+                            >
+                                For hospitals, clinics, and NABH-ready healthcare infrastructure, visit <span className="underline decoration-white/30 underline-offset-4">Blush & Hush Healthcare</span>.
+                            </Link>
+                        </div>
+
                         <div className="flex gap-4">
                             {/* Placeholders for social */}
                             <Link href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors"><Instagram size={18} /></Link>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Navbar } from "@/components/layout/navbar";
 import { Footer } from "@/components/layout/footer";
 import { ContactSection } from "@/components/sections/contact-section";
@@ -20,6 +21,16 @@ export default function AboutPage() {
                             <p>
                                 With over 3 years of specialized execution experience and a portfolio of 10+ healthcare facilities, we bridge the gap between aesthetic aspiration and technical necessity.
                             </p>
+
+                            {/* Editorial Healthcare Mention */}
+                            <div className="pt-4 mt-6 border-t border-navy/10">
+                                <p className="text-base text-secondary">
+                                    Alongside lifestyle and commercial interiors, Blush & Hush also delivers end-to-end healthcare infrastructure for clinics and hospitals.
+                                </p>
+                                <Link href="/healthcare" className="inline-block mt-2 text-navy hover:text-navy/80 transition-colors font-medium text-base">
+                                    Learn more at <span className="underline decoration-navy/20 underline-offset-4">Blush & Hush Healthcare</span>.
+                                </Link>
+                            </div>
                         </div>
                     </div>
                     <div className="relative h-[500px] w-full bg-white rounded-lg overflow-hidden shadow-xl">

@@ -46,39 +46,40 @@ export function ServicesSplit() {
                         </Link>
                     </motion.div>
 
-                    {/* Pillar B: Healthcare */}
+                    {/* Pillar B: Healthcare Gateway */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
                         viewport={{ once: true }}
-                        className="group relative bg-navy rounded-[18px] p-5 md:p-14 text-white shadow-xl overflow-hidden"
+                        className="group relative bg-navy rounded-[18px] p-5 md:p-14 text-white shadow-xl overflow-hidden flex flex-col justify-between min-h-[400px]"
                     >
-                        <div className="absolute top-0 right-0 p-5 md:p-10 opacity-5 group-hover:opacity-10 transition-opacity">
-                            <Stethoscope className="w-[60px] h-[60px] md:w-[120px] md:h-[120px]" strokeWidth={0.5} />
+                        {/* Minimal Background Icon */}
+                        <div className="absolute -bottom-10 -right-10 opacity-[0.03] group-hover:opacity-[0.07] transition-opacity duration-700">
+                            <Stethoscope className="w-[300px] h-[300px]" strokeWidth={0.5} />
                         </div>
 
-                        <div className="flex items-center gap-3 mb-4 md:mb-6">
-                            <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white">
-                                <Stethoscope size={20} />
-                            </span>
-                            <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase text-white/60">Specialized Infrastructure</span>
+                        <div>
+                            <div className="flex items-center gap-3 mb-8">
+                                <span className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white">
+                                    <Stethoscope size={20} />
+                                </span>
+                                <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase text-white/60">Specialized Infrastructure</span>
+                            </div>
+
+                            <h3 className="text-2xl md:text-4xl text-white group-hover:text-brass transition-colors font-serif">Healthcare Planning</h3>
                         </div>
 
-                        <h3 className="text-2xl md:text-4xl mb-3 md:mb-4 text-white group-hover:text-brass transition-colors">Healthcare Planning</h3>
-                        <p className="text-white/80 text-base md:text-lg mb-6 md:mb-8 leading-relaxed max-w-md">
-                            Healthcare design demands responsibility. We plan with clinical workflows and NABH standards in mind.
-                        </p>
-
-                        <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8 text-white/90 text-sm md:text-base">
-                            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-brass rounded-full"></span> Clinic & Hospital Planning</li>
-                            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-brass rounded-full"></span> OT Layout & Zoning (Sterile/Public)</li>
-                            <li className="flex items-center gap-2"><span className="w-1.5 h-1.5 bg-brass rounded-full"></span> Equipment & Approvals Coordination</li>
-                        </ul>
-
-                        <Link href="/services#healthcare" className="inline-flex items-center text-white font-semibold hover:gap-2 transition-all text-sm md:text-base">
-                            Explore Healthcare <ArrowRight size={16} className="ml-2" />
-                        </Link>
+                        {/* Gateway Link - The only interaction */}
+                        <div className="mt-auto pt-10">
+                            <Link
+                                href="/healthcare"
+                                className="group/link inline-flex items-center text-white/70 hover:text-white transition-colors text-sm font-medium tracking-wide"
+                            >
+                                Explore Healthcare
+                                <ArrowRight size={14} className="ml-2 opacity-50 group-hover/link:translate-x-1 transition-all" />
+                            </Link>
+                        </div>
                     </motion.div>
 
                 </div>
