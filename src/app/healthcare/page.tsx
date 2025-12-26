@@ -20,12 +20,16 @@ export default function HealthcarePage() {
             <style dangerouslySetInnerHTML={{
                 __html: `
                 /* Force system cursor on everything */
-                body, a, button, [role="button"], img, input {
-                    cursor: auto !important;
+                html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+                    cursor: default !important;
                 }
-                /* Ensure no hidden cursor from global rules leaks through */
-                html, body {
-                    cursor: auto !important;
+                /* Interactive elements */
+                a, button, [role="button"], input[type="submit"], input[type="reset"], input[type="button"], label[for] {
+                    cursor: pointer !important;
+                }
+                /* Text inputs */
+                input[type="text"], input[type="email"], input[type="password"], textarea, input[type="search"] {
+                    cursor: text !important;
                 }
             `}} />
 
