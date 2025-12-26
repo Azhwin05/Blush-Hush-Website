@@ -14,6 +14,8 @@ const navLinks = [
     { name: "Services", href: "/services" },
     { name: "Projects", href: "/projects" },
     { name: "Process", href: "/process" },
+    { name: "About", href: "/about" },
+    { name: "Healthcare", href: "/healthcare" },
     { name: "Contact", href: "/contact" },
 ];
 
@@ -56,19 +58,26 @@ export function Navbar() {
                 <nav className="hidden md:flex items-center gap-[26px]">
                     {navLinks.map((link) => {
                         const isActive = pathname === link.href;
+                        const isHealthcare = link.name === "Healthcare";
 
                         return (
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="relative text-[13px] font-normal tracking-[0.08em] uppercase text-ink hover:opacity-100 opacity-85 transition-opacity py-2"
+                                className={cn(
+                                    "relative text-[13px] font-normal tracking-[0.08em] uppercase hover:opacity-100 transition-opacity py-2",
+                                    isHealthcare ? "text-[#57A7B3] font-bold opacity-100" : "text-ink opacity-85"
+                                )}
                             >
                                 {link.name}
                                 {/* Active Link Sliding Underline */}
                                 {isActive && (
                                     <motion.span
                                         layoutId="navbar-underline"
-                                        className="absolute -bottom-1 left-0 right-0 h-[2px] bg-white/65 rounded-full"
+                                        className={cn(
+                                            "absolute -bottom-1 left-0 right-0 h-[2px] rounded-full",
+                                            isHealthcare ? "bg-[#57A7B3]" : "bg-white/65"
+                                        )}
                                         transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
                                     />
                                 )}

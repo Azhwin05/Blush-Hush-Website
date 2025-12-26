@@ -16,16 +16,20 @@ export function HealthcareHero() {
                 <div className="max-w-4xl">
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded border border-hc-teal/20 bg-hc-teal/5 text-hc-teal text-[10px] md:text-xs font-bold tracking-widest uppercase mb-6">
                         <span className="w-1.5 h-1.5 rounded-full bg-hc-teal animate-pulse"></span>
-                        Blush & Hush Healthcare
+                        Designing Spaces; Healing Environment
                     </div>
 
                     <h1 className="text-3xl md:text-6xl lg:text-7xl font-serif text-ink mb-6 leading-[1.15] md:leading-[1.1]">
-                        End-to-End Healthcare <br className="hidden md:block" />
-                        Infrastructure Solutions
+                        Healthcare Spaces Designed for <br className="hidden md:block" />
+                        Function and Compliance
                     </h1>
 
-                    <p className="text-lg md:text-2xl text-hc-olive max-w-2xl leading-relaxed mb-8 md:mb-10 font-manrope">
-                        Compliant. Efficient. NABH-Ready hospital and clinic planning — from concept to execution.
+                    <p className="text-lg md:text-2xl text-hc-olive font-serif italic mb-6">
+                        "Planning Hospitals with Precision"
+                    </p>
+
+                    <p className="text-base md:text-lg text-hc-olive/90 max-w-2xl leading-relaxed mb-8 md:mb-10 font-manrope">
+                        Blush & Hush designs homes and commercial spaces with creative clarity, while its dedicated healthcare division delivers compliant, functional medical infrastructure.
                     </p>
 
                     {/* Key Value Points */}

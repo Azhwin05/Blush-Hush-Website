@@ -4,8 +4,11 @@ import { HealthcareHero } from "@/components/healthcare/hero-section";
 import { CoreStrengths } from "@/components/healthcare/core-strengths";
 import { ProblemsSolved } from "@/components/healthcare/problem-solution";
 import { ComplianceNABH } from "@/components/healthcare/compliance-nabh";
-import { StatProof } from "@/components/healthcare/stat-proof";
-import { HealthcareCTA } from "@/components/healthcare/healthcare-cta";
+import { HealthcareLeadership } from "@/components/healthcare/healthcare-leadership";
+import { BrandingPhilosophy } from "@/components/healthcare/branding-philosophy";
+import { DeliveryProcess } from "@/components/healthcare/delivery-process";
+import { WhyTrustUs } from "@/components/healthcare/why-trust-us";
+import { HealthcareForm } from "@/components/healthcare/healthcare-form";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -29,10 +32,13 @@ export default function HealthcarePage() {
             <Navbar />
             <HealthcareHero />
             <CoreStrengths />
+            <DeliveryProcess />
+            <BrandingPhilosophy />
             <ProblemsSolved />
             <ComplianceNABH />
-            <StatProof />
-            <HealthcareCTA />
+            <HealthcareLeadership />
+            <WhyTrustUs />
+            <HealthcareForm />
             <Footer />
         </main>
     );

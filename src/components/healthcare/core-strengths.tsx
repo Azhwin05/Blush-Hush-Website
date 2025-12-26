@@ -1,29 +1,41 @@
-import { ShieldCheck, PenTool, HardHat, Activity } from "lucide-react";
+import { ShieldCheck, Activity, LayoutTemplate, Monitor, Pill, HardHat } from "lucide-react";
 
 const strengths = [
     {
-        title: "Medical Planning & Design",
-        icon: <PenTool className="w-8 h-8 text-hc-teal" strokeWidth={1.5} />,
-        description: "Layouts that minimize cross-contamination and maximize staff efficiency. We design for function first.",
-        benefit: "Reduces future renovation costs."
+        title: "Hospital & Clinic Planning",
+        icon: <LayoutTemplate className="w-8 h-8 text-hc-teal" strokeWidth={1.5} />,
+        description: "Space planning based on medical workflow. We optimize OPD, IPD, ICU, OT & diagnostics zoning.",
+        benefit: "Seamless doctor & patient movement."
     },
     {
-        title: "NABH Compliance Guidance",
-        icon: <ShieldCheck className="w-8 h-8 text-hc-teal" strokeWidth={1.5} />,
-        description: "Deep understanding of NBC and NABH guidelines to ensure your facility meets all accreditation standards.",
-        benefit: "Ensures smooth licensing approvals."
-    },
-    {
-        title: "Specialized Execution",
-        icon: <HardHat className="w-8 h-8 text-hc-teal" strokeWidth={1.5} />,
-        description: "Contractors trained in hospital-grade finishes, sterile wall cladding, vinyl flooring, and OT construction.",
-        benefit: "Delivers sterile, durable environments."
-    },
-    {
-        title: "Equipment Integration",
+        title: "Operation Theatre (OT) Design",
         icon: <Activity className="w-8 h-8 text-hc-teal" strokeWidth={1.5} />,
-        description: "Coordination with medical device vendors to ensure MGPS points, electrical loads, and clearances are accurate.",
-        benefit: "Eliminates expensive rework."
+        description: "Laminar, modular & conventional OT planning with strict sterile & semi-sterile zoning.",
+        benefit: "HVAC & material coordination."
+    },
+    {
+        title: "NABH Consulting & Guidance",
+        icon: <ShieldCheck className="w-8 h-8 text-hc-teal" strokeWidth={1.5} />,
+        description: "NABH-aligned design approach with documentation & layout guidance for practical compliance.",
+        benefit: "Readiness without overdesign."
+    },
+    {
+        title: "Medical Equipment Planning",
+        icon: <Monitor className="w-8 h-8 text-hc-teal" strokeWidth={1.5} />,
+        description: "Equipment placement planning and vendor coordination support for utility compatibility.",
+        benefit: "Service-ready layouts."
+    },
+    {
+        title: "Pharmacy & Diagnostic Setup",
+        icon: <Pill className="w-8 h-8 text-hc-teal" strokeWidth={1.5} />,
+        description: "Efficient pharmacy layout planning for storage dispensing and diagnostic lab interiors.",
+        benefit: "Storage & dispensing efficiency."
+    },
+    {
+        title: "Healthcare Interior Execution",
+        icon: <HardHat className="w-8 h-8 text-hc-teal" strokeWidth={1.5} />,
+        description: "Turnkey execution for multi-speciality hospitals, fertility centres, and children's hospitals.",
+        benefit: "Specialized hospital-grade finishes."
     }
 ];
 
@@ -32,11 +44,11 @@ export function CoreStrengths() {
         <section className="py-12 md:py-24 bg-hc-surface border-y border-hc-grey/30">
             <div className="container-wide">
                 <div className="mb-8 md:mb-12 border-l-4 border-hc-yellow pl-5 md:pl-6">
-                    <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase text-hc-olive block mb-2">Our Core Expertise</span>
-                    <h2 className="text-2xl md:text-4xl font-serif text-ink">Built on Safety, Driven by Logic.</h2>
+                    <span className="text-[10px] md:text-xs font-bold tracking-widest uppercase text-hc-olive block mb-2">Comprehensive Solutions</span>
+                    <h2 className="text-2xl md:text-4xl font-serif text-ink">Our Healthcare Services</h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-hc-grey/30 border border-hc-grey/30">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-hc-grey/30 border border-hc-grey/30">
                     {strengths.map((item, index) => (
                         <div key={index} className="bg-hc-surface p-6 md:p-10 hover:bg-hc-sky/5 transition-colors group">
                             <div className="mb-4 md:mb-6 opacity-80 group-hover:opacity-100 transition-opacity">
