@@ -32,7 +32,7 @@ export default function BrandingPage() {
             <section className="py-24 bg-navy text-white">
                 <div className="container-wide">
                     <span className="text-brass font-bold tracking-widest text-xs uppercase mb-4 block">Interior Branding</span>
-                    <h1 className="text-5xl md:text-7xl font-serif mb-8">
+                    <h1 className="text-5xl md:text-7xl font-serif mb-8 text-white">
                         Where Space Meets <br />
                         <span className="italic text-brass">Identity.</span>
                     </h1>
