@@ -10,13 +10,14 @@ import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-
 
 const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
-    { name: "Services", href: "/services" },
+    { name: "Architecture", href: "/architecture" },
+    { name: "Interior Design", href: "/interior-design" },
+    { name: "Branding", href: "/branding" },
     { name: "Projects", href: "/projects" },
     { name: "Process", href: "/process" },
     { name: "About", href: "/about" },
-    { name: "Healthcare", href: "/healthcare" },
     { name: "Contact", href: "/contact" },
+    { name: "Healthcare", href: "/healthcare" },
 ];
 
 export function Navbar() {

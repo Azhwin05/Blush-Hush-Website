@@ -62,6 +62,39 @@ export default function AboutPage() {
                 </div>
             </section>
 
+            <section className="py-24 bg-ivory text-ink">
+                <div className="container-wide max-w-5xl mx-auto">
+                    <div className="text-center mb-16">
+                        <span className="text-brass font-bold tracking-widest text-xs uppercase mb-4 block">Leadership</span>
+                        <h2 className="text-4xl md:text-5xl font-serif">Meet the Visionaries</h2>
+                    </div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+                        {/* Tamilmozhi B */}
+                        <div className="bg-white p-8 md:p-10 shadow-lg md:-rotate-1 hover:rotate-0 transition-transform duration-300">
+                            <div className="mb-4">
+                                <h3 className="text-2xl font-serif mb-1">Tamilmozhi B</h3>
+                                <p className="text-xs font-bold uppercase tracking-wider text-brass">CEO & Founder</p>
+                            </div>
+                            <p className="text-secondary leading-relaxed">
+                                Leads architecture, interiors, creative branding, client vision, and design quality at BH Arch, Interiors and BH Healthcare.
+                            </p>
+                        </div>
+
+                        {/* Tamil Iniyan B */}
+                        <div className="bg-white p-8 md:p-10 shadow-lg md:rotate-1 hover:rotate-0 transition-transform duration-300">
+                            <div className="mb-4">
+                                <h3 className="text-2xl font-serif mb-1">Tamil Iniyan B</h3>
+                                <p className="text-xs font-bold uppercase tracking-wider text-brass">COO & Senior Healthcare Consultant</p>
+                            </div>
+                            <p className="text-secondary leading-relaxed">
+                                Leads operations in BH Interiors and the healthcare vertical, focusing on planning, compliance, NABH guidance, and delivery excellence.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <ContactSection />
             <Footer />
         </main>

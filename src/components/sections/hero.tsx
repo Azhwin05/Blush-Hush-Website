@@ -28,14 +28,17 @@ export function Hero() {
                         transition={{ duration: 0.8, ease: [0.2, 0.8, 0.2, 1] }}
                         className="max-w-xl pt-20 md:pt-0"
                     >
+                        <span className="inline-block px-3 py-1 rounded-full bg-brass/10 border border-brass/20 text-brass text-[10px] md:text-xs font-bold tracking-widest uppercase mb-6">
+                            Elevating Lifestyles
+                        </span>
+
                         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-[1.1] mb-6 text-ink text-balance">
-                            Designing spaces that work — <br />
-                            <span className="italic text-secondary/90">for living, working & healing.</span>
+                            Architecture & Interiors <br />
+                            Designed for Real Living <span className="italic text-secondary/90">and Business.</span>
                         </h1>
 
                         <p className="text-lg md:text-xl font-light text-ink/80 max-w-lg mb-8 leading-relaxed">
-                            Premium residential interiors and NABH-compliant healthcare infrastructure.
-                            Built on functionality, not guesswork.
+                            Blush & Hush is a design-led architecture and interior firm delivering residential and commercial spaces with clarity, quality, and execution excellence.
                         </p>
 
                         <div className="flex flex-col md:flex-row items-center gap-4">
@@ -47,16 +50,13 @@ export function Hero() {
                             </Button>
                         </div>
 
-                        {/* Micro Trust Chips - Dark variant */}
-                        <div className="mt-12 flex flex-wrap gap-x-6 gap-y-3 opacity-90 text-xs md:text-sm font-medium tracking-wide uppercase text-ink/70">
-                            <span className="flex items-center gap-2">
-                                <span className="w-1.5 h-1.5 rounded-full bg-brass"></span>
-                                Execution-First
-                            </span>
-                            <span className="flex items-center gap-2">
-                                <span className="w-1.5 h-1.5 rounded-full bg-brass"></span>
-                                Healthcare Planning
-                            </span>
+                        {/* Quick Service Pills */}
+                        <div className="mt-12 flex flex-wrap gap-3">
+                            {["Architecture", "Interior Design", "Strategic Branding", "Execution"].map((item, i) => (
+                                <span key={i} className="px-4 py-2 bg-white/50 border border-navy/10 rounded-full text-sm font-medium text-navy/80 backdrop-blur-sm">
+                                    {item}
+                                </span>
+                            ))}
                         </div>
                     </motion.div>
 
