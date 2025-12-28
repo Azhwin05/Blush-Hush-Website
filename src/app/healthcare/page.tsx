@@ -7,6 +7,7 @@ import { ComplianceNABH } from "@/components/healthcare/compliance-nabh";
 import { HealthcareLeadership } from "@/components/healthcare/healthcare-leadership";
 import { BrandingPhilosophy } from "@/components/healthcare/branding-philosophy";
 import { DeliveryProcess } from "@/components/healthcare/delivery-process";
+import { ProjectShowcase } from "@/components/healthcare/project-showcase";
 import { WhyTrustUs } from "@/components/healthcare/why-trust-us";
 import { HealthcareForm } from "@/components/healthcare/healthcare-form";
 import { Metadata } from "next";
@@ -32,6 +33,7 @@ export default function HealthcarePage() {
             <Navbar />
             <HealthcareHero />
             <CoreStrengths />
+            <ProjectShowcase />
             <DeliveryProcess />
             <BrandingPhilosophy />
             <ProblemsSolved />
