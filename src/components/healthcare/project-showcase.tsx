@@ -92,6 +92,7 @@ export function ProjectShowcase() {
                                 fill
                                 className="object-cover"
                                 priority={index === 0}
+                                unoptimized={true}
                             />
 
                             {/* Overlay Content */}
